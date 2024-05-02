@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
 
         <WrapPanel Grid.Row="1">
-            <views:KalDay>
+            <views:KalDay x:Name="test" Content="asd" Height="67" Width="82" MouseDown="KalDay_MouseDown" >
 
             </views:KalDay>
         </WrapPanel>
@@ -23,10 +23,25 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="👈"></Button>
+            <Button x:Name="CoolKnopka" Grid.Column="0" Content="👈">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Option 1" />
+                        <MenuItem Header="Option 2" />
+                        <MenuItem Header="Option 3" />
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
             <TextBlock Grid.Column="1"></TextBlock>
-            <Button Grid.Column="2" Content="👉"></Button>
+            <Button x:Name="NotCoolButton" Grid.Column="2" Content="👉">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Пиздец" />
+                        <MenuItem Header="Ёбнешься" />
+                        <MenuItem Header="НЕ пропускайте это в эфир!" />
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
         </Grid>
     </Grid>
-
 </Window>

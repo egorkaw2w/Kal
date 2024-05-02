@@ -3,9 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                xmlns:local="clr-namespace:Kal" xmlns:views="clr-namespace:Kal.Views"
+        xmlns:local="clr-namespace:Kal.Views"
         mc:Ignorable="d"
         Title="KalCheckDay" Height="450" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="ColorAnimationStoryboard">
+            <ColorAnimation
+                Storyboard.TargetName="VeryCool"
+                Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                To="Green"
+                Duration="0:0:1"
+                AutoReverse="True"
+                RepeatBehavior="Forever"/>
+        </Storyboard>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -17,13 +28,14 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0"></Button>
-            <TextBlock Grid.Column="1"></TextBlock>
-            <Button Grid.Column="2"></Button>
+            <Button Grid.Column="0">👈 просто выйти ¯\_(ツ)_/¯</Button>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"> ну тут заглушка для приколов</TextBlock>
+            <Button x:Name="VeryCool" Grid.Column="2">Сохранить и выйти</Button>
         </Grid>
         <WrapPanel Grid.Row="1">
-            <views:MenstCicle></views:MenstCicle>
-
+            <local:MenstCicle Height="51" Width="139">
+                <Image Source="..\ультраимба.jpg"></Image>
+            </local:MenstCicle>
         </WrapPanel>
     </Grid>
 </Window>

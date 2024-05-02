@@ -13,5 +13,12 @@
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding DayNumber}"></TextBlock>
         <Image Grid.Row="1" Source="{Binding ImgSource}"></Image>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Edit" />
+                <MenuItem Header="Delete" />
+                <MenuItem Header="Copy" />
+            </ContextMenu>
+        </Grid.ContextMenu>
     </Grid>
 </UserControl>
