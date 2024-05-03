@@ -26,14 +26,23 @@ namespace Kal.Views
             animatedBrush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainWindow wind = new MainWindow();
             wind.Show();
             Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+
+        private void VeryCool_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow wind = new MainWindow();
+            wind.Show();
+            Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MainWindow wind = new MainWindow();
             wind.Show();

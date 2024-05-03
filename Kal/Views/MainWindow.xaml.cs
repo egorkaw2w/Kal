@@ -26,12 +26,17 @@ namespace Kal
             cool.From = CoolKnopka.ActualHeight;
             cool.To = 150;
             cool.Duration = TimeSpan.FromSeconds(3.14);
+            cool.AutoReverse = true;
+            cool.RepeatBehavior = RepeatBehavior.Forever;
+
             CoolKnopka.BeginAnimation(Button.HeightProperty, cool); 
 
             DoubleAnimation cool2 = new DoubleAnimation();
             cool2.From = NotCoolButton.ActualWidth;
             cool2.To = 369;
             cool2.Duration = TimeSpan.FromSeconds(3.15);
+            cool2.RepeatBehavior = RepeatBehavior.Forever;
+            cool2.AutoReverse = true;
             NotCoolButton.BeginAnimation(Button.WidthProperty, cool2);
         }
 

@@ -28,9 +28,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0">👈 просто выйти ¯\_(ツ)_/¯</Button>
+            <Button x:Name="justback" Grid.Column="0" Click="Button_Click_2">👈 просто выйти ¯\_(ツ)_/¯</Button>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"> ну тут заглушка для приколов</TextBlock>
-            <Button x:Name="VeryCool" Grid.Column="2">Сохранить и выйти</Button>
+            <Button x:Name="VeryCool" Grid.Column="2" Click="VeryCool_Click">Сохранить и выйти</Button>
         </Grid>
         <WrapPanel Grid.Row="1">
             <local:MenstCicle Height="51" Width="139">
